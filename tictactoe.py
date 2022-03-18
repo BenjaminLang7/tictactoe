@@ -161,6 +161,7 @@ def takeTurns(position):
         
         ## AI Turn ##
         if not (win(board, 'X')):
+            emptyspots = board.count("-")
             turn = aiTurn()
             print(f"AI intends on going position {turn}")
             if turn in range (9):
@@ -172,9 +173,13 @@ def takeTurns(position):
                     flash("Game over, AI wins.")
 
                 renderBoard()
-            else:
+            
+            elif emptyspots == 0:
                 print("Game ends in a draw.")
                 flash("Game ends in a draw.")
+            else:
+                print("Invalid Turn.")
+                flash("Invalid Turn.")
         
         else:
             print("Game over, player wins.")
