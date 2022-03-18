@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TicTacToe vs. AI</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div class="upper-container">
+            <h1>TicTacToe against the AI!</h1>
+            <a href="start"><button>New Game!</button></a>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <p class="error">{{message}}</p>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>
+        <form action="/place" method="POST">
+            <table>
+                <tr>
+                    <td>
+                        <!-- Spot 0 -->
+                        {{board[0]}}
+                    </td>
+                    <td>
+                        <!-- Spot 1 -->
+                        {{board[1]}}
+                    </td>
+                    <td>
+                        <!-- Spot 2 -->
+                        {{board[2]}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- Spot 3 -->
+                        {{board[3]}}
+                    </td>
+                    <td>
+                        <!-- Spot 4 -->
+                        {{board[4]}}
+                    </td>
+                    <td>
+                        <!-- Spot 5 -->
+                        {{board[5]}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- Spot 6 -->
+                        {{board[6]}}
+                    </td>
+                    <td>
+                        <!-- Spot 7 -->
+                        {{board[7]}}
+                    </td>
+                    <td>
+                        <!-- Spot 8 -->
+                        {{board[8]}}
+                    </td>
+                </tr>
+            </table>
+            <div class="form-base">
+                <label for="position">Position Number (0 - 8)</label>
+                <input class="chooser" type="number" name="position" max="8" min="0" value="0">
+            </div>
+            <div>
+                <label for="position"></label>
+                <input class="button" type="submit" value="Go Here" name="position">
+            </div>
+        </form>
+        <div class="key">
+            <p>Key</p>
+            <p>0 1 2</p>
+            <p>3 4 5</p>
+            <p>6 7 8</p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+* {
+    color: antiquewhite;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+button, input {
+    background-color:coral;
+    display:inline;
+    color: black;
+    font-weight: bolder;
+
+}
+
+body {
+    background-color:darkslategray;
+    margin: auto;
+    /* display: inline-block; */
+    max-width: 500px;
+}
+h1 {
+    text-align: center;
+}
+form {
+    font-size: 72px;
+    align-content: center;
+    text-align: center;
+}
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-base {
+    font-size: 24px;
+    display: flex;
+}
+
+.upper-container {
+    display: block;
+    text-align: center;
+}
+
+.chooser {
+    padding: 5px, 10px, 5px, 20px;
+    font-size: 24px;
+    height: 25px;
+    width: 60px;
+}
+
+.error {
+    color: coral;
+    font-weight: bolder;
+}
+
+.key {
+    text-align: center;
+    font-size: 12px;
+}
